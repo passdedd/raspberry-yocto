@@ -1,0 +1,25 @@
+diff --git a/arch/arm/boot/dts/bcm2708-rpi-0-w.dts b/arch/arm/boot/dts/bcm2708-rpi-0-w.dts
+index 6831640..9c4086c 100644
+--- a/arch/arm/boot/dts/bcm2708-rpi-0-w.dts
++++ b/arch/arm/boot/dts/bcm2708-rpi-0-w.dts
+@@ -56,9 +56,8 @@
+ 	};
+ 
+ 	uart0_pins: uart0_pins {
+-		brcm,pins = <30 31 32 33>;
+-		brcm,function = <7>; /* alt3=UART0 */
+-		brcm,pull = <2 0 0 2>; /* up none none up */
++                brcm,pins = <14 15>;
++                brcm,function = <BCM2835_FSEL_ALT0>;
+ 	};
+ 
+ 	uart1_pins: uart1_pins {
+@@ -83,7 +82,7 @@
+ 
+ &uart0 {
+ 	pinctrl-names = "default";
+-	pinctrl-0 = <&uart0_pins &bt_pins>;
++	pinctrl-0 = <&uart0_pins>;
+ 	status = "okay";
+ };
+ 
