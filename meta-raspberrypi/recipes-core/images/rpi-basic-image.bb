@@ -5,6 +5,7 @@ include recipes-graphics/images/core-image-weston.bb
 # Include modules in rootfs
 IMAGE_INSTALL += " \
 	kernel-modules \
+        dhcp-client \
 	"
 
 SPLASH = "psplash-raspberrypi"
